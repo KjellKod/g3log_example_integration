@@ -2,7 +2,7 @@
 Example project of how to integrate with g3logi
 
 
-## Example of Building g3log, shared library,  in a local location
+## Example of building g3log, shared library,  in a local location
 ```
 git clone https://github.com/KjellKod/g3log.git
 cd g3log
@@ -33,6 +33,9 @@ target_link_libraries(example PUBLIC ${G3LOG_LIBRARIES})
 
 ## Building the example
 ```
+cd g3log_example_integration
+mkdir build
+cd build
 cmake -DCMAKE_PREFIX_PATH=/home/kjell/opt ..
 cmake --build .
 ```
@@ -42,8 +45,27 @@ In this case we installed g3log in a custom location
 Since we built g3log this time as a shared libary the `LD_LIBRARY_PATH` must be set. 
 ```
 LD_LIBRARY_PATH=/home/kjell/opt/lib/ ./example 
+
+
+## Example of building g3log, static library, in a local location
+```
+git clone https://github.com/KjellKod/g3log.git
+cd g3log
+mkdir build
+cd build
+cmake -DG3_SHARED_LIB=OFF -DCMAKE_INSTALL_PREFIX=/home/kjell/opt ..
+cmake --build . --target install
 ```
 
+Integrating and running the example with statically built g3log
+```
+cd g3log_example_integration
+mkdir build
+cd build
+cmake -DCMAKE_PREFIX_PATH=/home/kjell/opt ..
+cmake --build .
+```
 
-
+### Running the example
+./example
  
