@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.17)
+cmake_minimum_required (VERSION 3.12)
 project(example_project)
 
 find_package(g3log CONFIG REQUIRED)
