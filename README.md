@@ -44,7 +44,7 @@ In this case we installed g3log in a custom location
 Since we built g3log this time as a shared libary the `LD_LIBRARY_PATH` must be set. 
 ```
 LD_LIBRARY_PATH=/home/kjell/opt/lib/ ./example 
-
+```
 
 ## Example of building g3log, static library, in a local location
 ```
