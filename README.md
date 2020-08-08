@@ -66,5 +66,6 @@ cmake --build .
 ```
 
 ### Running the example
+```
 ./example
- 
+``` 
