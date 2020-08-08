@@ -1,7 +1,7 @@
 # g3log_example_integration
 Example project of how to integrate with g3log
 
-### Example of Building g3log, shared library,  in a local location
+## Example of Building g3log, shared library,  in a local location
 ```
 git clone https://github.com/KjellKod/g3log.git
 cd g3log
