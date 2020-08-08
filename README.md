@@ -10,7 +10,7 @@ mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=/home/kjell/opt ..
 cmake --build . --target install
-
+```
 
 # Integrating the example with g3log
 The content of the `CMakeLists.txt` is as follows:
