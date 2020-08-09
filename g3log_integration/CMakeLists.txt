@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.12)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(example_project)
+project(example_g3log)
 
 find_package(g3log CONFIG REQUIRED)
 message(
@@ -13,5 +13,5 @@ message(
 )
 
 include_directories(${G3LOG_INCLUDE_DIRS})
-add_executable(example example_main.cpp)
-target_link_libraries(example PUBLIC ${G3LOG_LIBRARIES})
+add_executable(example_g3log example_g3log_main.cpp)
+target_link_libraries(example_g3log PUBLIC ${G3LOG_LIBRARIES})

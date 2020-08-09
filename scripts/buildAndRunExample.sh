@@ -11,12 +11,21 @@ cmake -DADD_G3LOG_UNIT_TEST=OFF -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFI
   make -j && sudo make install
 cmake --build . --target install
 
-# Build g3sinks
 cd $pwd
+cd g3log_integration
 mkdir build 
 cd build 
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/local .. 
 cmake --build . 
-LD_LIBRARY_PATH=/usr/local/lib/ ./example 
+LD_LIBRARY_PATH=/usr/local/lib/ ./example_g3log
 
+
+
+cd $pwd
+cd g3sinks_integration
+mkdir build
+cd build 
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/local .. 
+cmake --build . 
+ LD_LIBRARY_PATH=/usr/local/lib/ ./example_g3sinks
 
